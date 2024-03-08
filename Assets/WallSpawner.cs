@@ -7,6 +7,8 @@ public class WallSpawner : MonoBehaviour
     public GameObject newWall;
     private GameObject currentWall;
     private bool isDragging = false;
+    public int price;
+    public GameObject money;
 
     void Update()
     {
@@ -26,11 +28,13 @@ public class WallSpawner : MonoBehaviour
     }
     public void StartDragging() 
     {
-        if (!isDragging)
+        MoneyCounter m = money.GetComponent<MoneyCounter>();
+        if (!isDragging && price <= m.amount)
         {
             Vector3 spawnPosition = GetWorldPosition();
             currentWall = Instantiate(newWall, spawnPosition, Quaternion.identity);
             isDragging = true;
+            m.changeMoney(price);
         }
     }
     void DragWall()
