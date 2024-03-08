@@ -12,11 +12,7 @@ public class WallSpawner : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !isDragging)
-        {
-            StartDragging();
-        }
-        else if (isDragging && Input.GetMouseButtonDown(0))
+        if (isDragging && Input.GetMouseButtonDown(0))
         {
             PlaceWall();
         }
