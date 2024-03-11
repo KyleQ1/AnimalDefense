@@ -48,6 +48,8 @@ public class WallSpawner : MonoBehaviour
         Vector3 mousePoint = Input.mousePosition;
         mousePoint.z = Camera.main.nearClipPlane;
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePoint);
+        worldPosition.x = Mathf.Round(worldPosition.x);
+        worldPosition.y = Mathf.Round(worldPosition.y);
         return worldPosition;
     }
 
