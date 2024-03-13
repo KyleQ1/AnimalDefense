@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7185212870812987357}
   - component: {fileID: 1239395689335312093}
-  - component: {fileID: 515020320809355016}
   - component: {fileID: 8044589006167867292}
   - component: {fileID: 5840606274802879903}
   - component: {fileID: 367297793130410309}
   - component: {fileID: 4034695615673469660}
+  - component: {fileID: 6838077524960970683}
+  - component: {fileID: 5197813477472743801}
   m_Layer: 0
   m_Name: guncop
   m_TagString: Untagged
@@ -30,13 +31,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193504149647084703}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.68, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.2925386, w: 0.9562537}
+  m_LocalPosition: {x: -1.3396769, y: -2.634508, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -34.02}
 --- !u!212 &1239395689335312093
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -89,19 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &515020320809355016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1193504149647084703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6080a8ebf890ea9478314b0222de63fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  racecar: {fileID: 0}
 --- !u!114 &8044589006167867292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 1
+  radius: 0.79
   height: 2
   canMove: 1
   maxSpeed: 3
@@ -167,7 +155,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.6
   pickNextWaypointDist: 2
-  endReachedDistance: 5
+  endReachedDistance: 4.12
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -221,3 +209,42 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!50 &6838077524960970683
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193504149647084703}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &5197813477472743801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193504149647084703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48db96b715c4fac479d24e3de6d8d6af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

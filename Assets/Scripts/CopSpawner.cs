@@ -1,54 +1,51 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class CopSpawner : MonoBehaviour
+public class WaveSpawner : MonoBehaviour
 {
     public GameObject copPrefab;
-    public Transform racecar;
-    public float spawnInterval = 5f;
-    public int copsPerWave = 3;
+    public float spawnDistance = 20f;
+    public float timeBetweenWaves = 5f;
+    private float countdown = 2f;
+    private int waveNumber = 1;
 
-    private float timeSinceLastSpawn;
-    private Camera mainCamera;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        timeSinceLastSpawn = spawnInterval;
-        mainCamera = Camera.main;
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        timeSinceLastSpawn += Time.deltaTime;
-
-        if (timeSinceLastSpawn > spawnInterval)
+        if (countdown <= 0f)
         {
-            timeSinceLastSpawn = 0f;
-            SpawnWave();
+            StartCoroutine(SpawnWave());
+            countdown = timeBetweenWaves;
         }
+        countdown -= Time.deltaTime;
     }
 
-    void SpawnWave()
+    IEnumerator SpawnWave()
     {
-        for (int i = 0; i < copsPerWave; i++)
+        Vector2 spawnDirection = RandomDirectionOutsideView();
+        for (int i = 0; i < waveNumber; i++)
         {
-            Vector3 spawnPosition = RandomPositionOutsideView();
-            GameObject cop = Instantiate(copPrefab, spawnPosition, Quaternion.identity);
-            CopAI agent = cop.GetComponent<CopAI>();
-            if (agent != null)
+            Vector2 spawnPosition = CalculateSpawnPosition(spawnDirection, i);
+            if (!Physics2D.OverlapCircle(spawnPosition, 1f, LayerMask.GetMask("Obstacle")))
             {
-                agent.racecar = racecar;
+                Instantiate(copPrefab, spawnPosition, Quaternion.identity);
             }
+            yield return new WaitForSeconds(0.5f);
         }
+        waveNumber++;
     }
 
-    Vector3 RandomPositionOutsideView()
+    Vector2 RandomDirectionOutsideView()
     {
+        float angle = Random.Range(0f, 360f);
+        Vector2 direction = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
+        return direction;
+    }
 
-        float radius = 10f;
-        Vector2 randomPoint = Random.insideUnitCircle * radius;
-        return racecar.position + new Vector3(randomPoint.x, 0, randomPoint.y);
+    Vector2 CalculateSpawnPosition(Vector2 direction, int index)
+    {
+        Vector2 offset = direction * spawnDistance + direction * index * 2f; 
+        Vector2 spawnPosition = Camera.main.transform.position + (Vector3) offset;
+        return spawnPosition;
     }
 }
