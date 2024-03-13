@@ -39,6 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Skidmarks
+    uniqueID: 3861937973
+    locked: 0
+  - name: Car
+    uniqueID: 2451689843
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
