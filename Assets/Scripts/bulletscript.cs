@@ -14,7 +14,7 @@ public class bulletscript : MonoBehaviour
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        rb =GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         Vector3 direction = mousePos - transform.position;
         Vector3 rotation = transform.position - mousePos;
@@ -26,6 +26,6 @@ public class bulletscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
