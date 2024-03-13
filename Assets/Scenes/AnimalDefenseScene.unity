@@ -2165,6 +2165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 20
+  car: {fileID: 1863233129}
 --- !u!61 &1956511910
 BoxCollider2D:
   m_ObjectHideFlags: 0
