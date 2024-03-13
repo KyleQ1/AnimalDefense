@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+    public float rotationSpeed;
+    public float acceleration;
+    public float maxSpeed;
 
-    // Start is called before the first frame update
+    private Rigidbody2D rb;
+
     void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Get the input values for horizontal and vertical axes
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        // turning
+        float rotation = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
+        rb.rotation -= rotation;
 
-        // Calculate the movement direction
-        Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f);
+        // acceleration
+        float moveDirection = Input.GetAxis("Vertical");
+        Vector2 forward = transform.up * moveDirection * acceleration;
+        rb.AddForce(forward);
 
-        // Move the character
-        transform.Translate(movement * speed * Time.deltaTime);
+        // speed cap
+        if (rb.velocity.magnitude > maxSpeed)
+        {
+            rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed);
+        }
     }
 }
