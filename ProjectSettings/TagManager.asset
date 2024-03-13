@@ -13,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Obstacle
+  - 
   - 
   - 
   - 
@@ -45,6 +45,9 @@ TagManager:
     locked: 0
   - name: Car
     uniqueID: 2451689843
+    locked: 0
+  - name: Gun
+    uniqueID: 56605325
     locked: 0
   - name: Default
     uniqueID: 0
