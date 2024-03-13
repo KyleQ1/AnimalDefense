@@ -2207,7 +2207,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 0
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
@@ -2480,7 +2480,7 @@ GameObject:
   - component: {fileID: 1863233135}
   m_Layer: 0
   m_Name: racecar
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2936,6 +2936,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1330528869}
   - {fileID: 716705406}
   - {fileID: 398501249}
   - {fileID: 1914598532}
@@ -2946,6 +2947,5 @@ SceneRoots:
   - {fileID: 615182065}
   - {fileID: 360702876}
   - {fileID: 923544291}
-  - {fileID: 1330528869}
   - {fileID: 1684753661}
   - {fileID: 77909690}

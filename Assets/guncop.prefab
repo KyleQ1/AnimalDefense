@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4034695615673469660}
   - component: {fileID: 6838077524960970683}
   - component: {fileID: 5197813477472743801}
+  - component: {fileID: 4613751706133067750}
   m_Layer: 0
   m_Name: guncop
   m_TagString: Untagged
@@ -248,3 +249,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48db96b715c4fac479d24e3de6d8d6af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4613751706133067750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193504149647084703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a46f964eb2e4c54cb0e1cb2cddfaa19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  healthBarFill: {fileID: 0}
