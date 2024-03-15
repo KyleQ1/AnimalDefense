@@ -8,10 +8,15 @@ public class CopTargetSetter : MonoBehaviour
 {
     AIDestinationSetter destinationSetter;
     Health health;
+    public GameObject money;
+    public int monetaryValue = 5;
+
     void Start()
     {
         destinationSetter = GetComponent<AIDestinationSetter>();
         health = GetComponent<Health>();
+        money = GameObject.Find("Money");
+
         destinationSetter.target = GameObject.Find("racecar").transform;
     }
 
@@ -20,7 +25,11 @@ public class CopTargetSetter : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             float damage = 50f;
-            health.TakeDamage(damage);
+            bool died = health.TakeDamage(damage);
+            if (died)
+            {
+                money.GetComponent<MoneyCounter>().addMoney(monetaryValue);
+            }
             Destroy(collision.gameObject);
         }
     }

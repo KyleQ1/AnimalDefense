@@ -22,10 +22,15 @@ public class MoneyCounter : MonoBehaviour
     [ContextMenu("Add 100")]
     public void addMoney()
     {
-        changeMoney(-100);
+        addMoney(100);
     }
 
-    public void changeMoney(int price)
+    public void addMoney(int price)
+    {
+        amount += price;
+        UpdateText();
+    }
+    public void buy(int price)
     {
         amount -= price;
         UpdateText();

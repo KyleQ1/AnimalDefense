@@ -15,7 +15,8 @@ public class Health : MonoBehaviour
         UpdateHealthBar();
     }
 
-    public void TakeDamage(float amount)
+    // returns true if the object died
+    public bool TakeDamage(float amount)
     {
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
@@ -23,7 +24,9 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            return true;
         }
+        return false;
     }
 
     public void Heal(float amount)

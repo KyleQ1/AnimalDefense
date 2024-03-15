@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: guncop
       objectReference: {fileID: 0}
+    - target: {fileID: 5197813477472743801, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 1131447675}
     - target: {fileID: 7185212870812987357, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.12

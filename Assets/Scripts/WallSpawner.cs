@@ -30,7 +30,7 @@ public class WallSpawner : MonoBehaviour
             Vector3 spawnPosition = GetWorldPosition();
             currentWall = Instantiate(newWall, spawnPosition, Quaternion.identity);
             isDragging = true;
-            m.changeMoney(price);
+            m.buy(price);
         }
     }
     void DragWall()
