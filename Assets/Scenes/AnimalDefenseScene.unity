@@ -3350,6 +3350,7 @@ GameObject:
   - component: {fileID: 1914598531}
   - component: {fileID: 1914598530}
   - component: {fileID: 1914598529}
+  - component: {fileID: 1914598533}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3442,6 +3443,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1914598533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914598528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c21136cde7245bcaa8a6487546c5eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 360702874}
+  shop: {fileID: 589009980}
 --- !u!1 &1924361886
 GameObject:
   m_ObjectHideFlags: 0
@@ -3617,12 +3632,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 33498046041956837, guid: da9d3d2d4099bc844a09da1a24ae16f1, type: 3}
+      propertyPath: spawner
+      value: 
+      objectReference: {fileID: 360702874}
+    - target: {fileID: 33498046041956837, guid: da9d3d2d4099bc844a09da1a24ae16f1, type: 3}
       propertyPath: timeBetweenFiring
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2040704408059074882, guid: da9d3d2d4099bc844a09da1a24ae16f1, type: 3}
       propertyPath: m_SortingLayer
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2040704408059074882, guid: da9d3d2d4099bc844a09da1a24ae16f1, type: 3}
       propertyPath: m_SortingLayerID
@@ -3630,7 +3649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2790625673880440504, guid: da9d3d2d4099bc844a09da1a24ae16f1, type: 3}
       propertyPath: m_SortingLayer
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2790625673880440504, guid: da9d3d2d4099bc844a09da1a24ae16f1, type: 3}
       propertyPath: m_SortingLayerID

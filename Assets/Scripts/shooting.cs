@@ -11,6 +11,8 @@ public class shooting : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetweenFiring;
+    public GameObject spawner;
+    public bool inWave;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,9 @@ public class shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // check if you are in build or attack phase
+        inWave = !spawner.GetComponent<WaveSpawner>().readyForWave;
+
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 
         Vector3 rotation = mousePos - transform.position;
@@ -36,9 +41,10 @@ public class shooting : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButton(0) && canFire){
+        if (Input.GetMouseButton(0) && canFire && inWave){
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
         }
+
     }
 }

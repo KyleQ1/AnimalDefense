@@ -7,7 +7,7 @@ public class WaveCounter : MonoBehaviour
 {
     public TextMeshProUGUI text;
     public GameObject spawner;
-    bool inWave = true;
+    bool inWave;
     int counter;
 
     void Start()
