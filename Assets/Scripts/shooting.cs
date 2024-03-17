@@ -39,6 +39,8 @@ public class shooting : MonoBehaviour
         if (Input.GetMouseButton(0) && canFire){
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            Vector2 shootDirection = ((Vector2)mousePos - (Vector2)transform.position).normalized;
+            bullet.GetComponent<bulletscript>().SetDirection(shootDirection);
         }
     }
 }
