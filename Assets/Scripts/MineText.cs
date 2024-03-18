@@ -11,11 +11,10 @@ public class MineText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateText();
-
+       
     }
 
-    void UpdateText()
+    void Update()
     {
         text.text = "Mine: " + priceScript.GetComponent<towerSpawn>().price.ToString();
     }

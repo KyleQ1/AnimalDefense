@@ -1609,11 +1609,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ff3d8d9dfdae4695c3d7aae0ded82, type: 3}
---- !u!1 &347527261 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7636277568142831314, guid: 451ff3d8d9dfdae4695c3d7aae0ded82, type: 3}
-  m_PrefabInstance: {fileID: 347527260}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &360702874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,7 +2843,6 @@ GameObject:
   - component: {fileID: 431380271}
   - component: {fileID: 431380270}
   - component: {fileID: 431380273}
-  - component: {fileID: 431380274}
   m_Layer: 5
   m_Name: BuyTower
   m_TagString: Untagged
@@ -2990,20 +2984,6 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!114 &431380274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431380268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3d3ef9ba1054449c95f39b2c588f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 1085559280}
-  priceScript: {fileID: 347527261}
 --- !u!1 &436654894
 GameObject:
   m_ObjectHideFlags: 0
@@ -3649,7 +3629,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4991979761420889120, guid: 451ff3d8d9dfdae4695c3d7aae0ded82, type: 3}
   m_PrefabInstance: {fileID: 347527260}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347527261}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc350122fd0aa480caaf1942f55f10e9, type: 3}
@@ -16574,13 +16554,11 @@ SceneRoots:
   - {fileID: 1684753661}
   - {fileID: 436654896}
   - {fileID: 347527260}
-  - {fileID: 434290182}
   - {fileID: 1781010342}
   - {fileID: 390249235}
   - {fileID: 1345181288}
   - {fileID: 1670518130}
   - {fileID: 463257982}
-  - {fileID: 1242670911}
   - {fileID: 408255273}
   - {fileID: 989352416}
   - {fileID: 2017796898}
@@ -16591,7 +16569,6 @@ SceneRoots:
   - {fileID: 1695890383}
   - {fileID: 555455161}
   - {fileID: 944007989}
-  - {fileID: 1215445662}
   - {fileID: 1483970368}
   - {fileID: 562501686}
   - {fileID: 1869866689}
@@ -16615,7 +16592,6 @@ SceneRoots:
   - {fileID: 953603780}
   - {fileID: 1951599755}
   - {fileID: 1288673574}
-  - {fileID: 348462616}
   - {fileID: 1850417045}
   - {fileID: 442783758}
   - {fileID: 833433583}
@@ -16643,7 +16619,6 @@ SceneRoots:
   - {fileID: 705260619}
   - {fileID: 272875281}
   - {fileID: 1825005407}
-  - {fileID: 1215755010}
   - {fileID: 1153423857}
   - {fileID: 1268182497}
   - {fileID: 366356581}
