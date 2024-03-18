@@ -23,8 +23,8 @@ public class SMGUpgrade : MonoBehaviour
 
     public void smg(){
         MoneyCounter m = money.GetComponent<MoneyCounter>();
-        if (price <= m.amount){
-            if(s != null) {s.timeBetweenFiring = 0.05f;}
+        if (price <= m.amount && s.timeBetweenFiring > 0.05f){
+            if(s != null) {s.timeBetweenFiring -= 0.15f;}
             m.buy(price);
         }
     }
