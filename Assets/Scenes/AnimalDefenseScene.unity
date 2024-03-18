@@ -862,6 +862,7 @@ MonoBehaviour:
   s: {fileID: 1891237521}
   price: 100
   money: {fileID: 1131447675}
+  level: 1
 --- !u!4 &436654896
 Transform:
   m_ObjectHideFlags: 0
@@ -1771,6 +1772,7 @@ GameObject:
   - component: {fileID: 1100687509}
   - component: {fileID: 1100687508}
   - component: {fileID: 1100687511}
+  - component: {fileID: 1100687512}
   m_Layer: 5
   m_Name: Upgrade to SMG
   m_TagString: Untagged
@@ -1912,6 +1914,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1100687512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100687506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e3d3019c4ec47a995d50799a0eac7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1427042915}
+  priceScript: {fileID: 436654894}
 --- !u!1 &1131447675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2146,6 +2162,7 @@ GameObject:
   - component: {fileID: 1193879606}
   - component: {fileID: 1193879605}
   - component: {fileID: 1193879608}
+  - component: {fileID: 1193879609}
   m_Layer: 5
   m_Name: BuyWall
   m_TagString: Untagged
@@ -2287,6 +2304,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1193879609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193879603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5d6d24b7ffa43a9b5fb182295449d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 201582090}
+  priceScript: {fileID: 109168318}
 --- !u!1 &1250682967
 GameObject:
   m_ObjectHideFlags: 0
