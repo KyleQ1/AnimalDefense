@@ -20,12 +20,13 @@ public class GunText : MonoBehaviour
         string lv;
         if (level == 4)
         {
-            lv = "(Max Level)";
+            text.text = "Max Level";
         } else
         {
             lv = "(Level " + level.ToString() + ")";
+            text.text = "Upgrade Gun: " + price + "\n" + lv;
         }
-        text.text = "Upgrade Gun: " + price + lv;
+       
 
     }
 }
