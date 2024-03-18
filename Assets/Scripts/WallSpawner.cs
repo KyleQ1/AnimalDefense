@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,7 +22,7 @@ public class WallSpawner : MonoBehaviour
             DragWall();
         }
     }
-    public void StartDragging() 
+    public void StartDragging()
     {
         MoneyCounter m = money.GetComponent<MoneyCounter>();
         if (!isDragging && price <= m.amount)

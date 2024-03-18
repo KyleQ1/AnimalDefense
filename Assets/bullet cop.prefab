@@ -34,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4246213847526806100, guid: f8ec337e244c135419e551757e706156, type: 3}
       propertyPath: m_Name
-      value: Bullet
+      value: bullet cop
       objectReference: {fileID: 0}
     - target: {fileID: 4246213847526806100, guid: f8ec337e244c135419e551757e706156, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4246213847526806100, guid: f8ec337e244c135419e551757e706156, type: 3}
       propertyPath: m_TagString
@@ -106,9 +106,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4246213847526806100, guid: f8ec337e244c135419e551757e706156, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8435426832529806239}
-    - targetCorrespondingSourceObject: {fileID: 4246213847526806100, guid: f8ec337e244c135419e551757e706156, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 255589249854926220}
     - targetCorrespondingSourceObject: {fileID: 4246213847526806100, guid: f8ec337e244c135419e551757e706156, type: 3}
       insertIndex: -1
@@ -119,19 +116,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4246213847526806100, guid: f8ec337e244c135419e551757e706156, type: 3}
   m_PrefabInstance: {fileID: 1308958935832443507}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8435426832529806239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2938545742969808935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c1beb17b9bf5fd4c903ed86f6bd4944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 20
 --- !u!50 &255589249854926220
 Rigidbody2D:
   serializedVersion: 4

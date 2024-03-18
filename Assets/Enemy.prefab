@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4346762409853828140}
   - component: {fileID: 4265544119904658713}
   - component: {fileID: 5962632490952358415}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,6 +153,10 @@ PrefabInstance:
     - target: {fileID: 1193504149647084703, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
       propertyPath: m_Name
       value: guncop (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193504149647084703, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4034695615673469660, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
       propertyPath: m_Radius
