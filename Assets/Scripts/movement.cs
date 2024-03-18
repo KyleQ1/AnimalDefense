@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public AudioSource s;
+    public AudioClip SoundClip;
     public float rotationSpeed;
     public float acceleration;
     public float maxSpeed;
@@ -25,6 +28,20 @@ public class PlayerController : MonoBehaviour
         float moveDirection = Input.GetAxis("Vertical");
         Vector2 forward = transform.up * moveDirection * acceleration;
         rb.AddForce(forward);
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            // Play the sound
+            if (!s.isPlaying) // Ensure sound is not already playing
+            {
+                s.Play();
+            }
+        }
+        else
+        {
+            // Stop the sound if 'W' key is released
+            s.Stop();
+        }
 
         // speed cap
         if (rb.velocity.magnitude > maxSpeed)

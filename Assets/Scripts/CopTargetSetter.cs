@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class CopTargetSetter : MonoBehaviour
 {
+    public AudioSource exp;
+    public AudioClip SoundClip;
     AIDestinationSetter destinationSetter;
     Health health;
     public GameObject money;
@@ -35,6 +37,7 @@ public class CopTargetSetter : MonoBehaviour
 
         if (collision.gameObject.CompareTag("tower"))
         {
+            exp.PlayOneShot(SoundClip);
             int damage = 100;
             bool died = health.TakeDamage(damage);
             if (died)
@@ -42,6 +45,8 @@ public class CopTargetSetter : MonoBehaviour
                 money.GetComponent<MoneyCounter>().addMoney(monetaryValue);
             }
             Destroy(collision.gameObject);
+
+            
         }
     }
 
