@@ -409,6 +409,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1131447675}
     - target: {fileID: 4991979761420889120, guid: 451ff3d8d9dfdae4695c3d7aae0ded82, type: 3}
+      propertyPath: price
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991979761420889120, guid: 451ff3d8d9dfdae4695c3d7aae0ded82, type: 3}
       propertyPath: newWall
       value: 
       objectReference: {fileID: 3613937618837076174, guid: ff8a0326e77cc094b915fda79b3c1da4, type: 3}
@@ -1494,9 +1498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'MINE
-
-'
+  m_text: 'Mine: 20'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
