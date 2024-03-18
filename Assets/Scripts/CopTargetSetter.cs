@@ -32,5 +32,18 @@ public class CopTargetSetter : MonoBehaviour
             }
             Destroy(collision.gameObject);
         }
+
+        if (collision.gameObject.CompareTag("tower"))
+        {
+            int damage = 100;
+            bool died = health.TakeDamage(damage);
+            if (died)
+            {
+                money.GetComponent<MoneyCounter>().addMoney(monetaryValue);
+            }
+            Destroy(collision.gameObject);
+        }
     }
+
+
 }
