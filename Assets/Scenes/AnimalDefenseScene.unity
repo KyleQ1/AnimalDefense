@@ -128,7 +128,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4991979761420889120, guid: 28a5df76eb2517a46957666f82e0fb8a, type: 3}
   m_PrefabInstance: {fileID: 6657961935311599897}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6657961935311599898}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc350122fd0aa480caaf1942f55f10e9, type: 3}
@@ -421,6 +421,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451ff3d8d9dfdae4695c3d7aae0ded82, type: 3}
+--- !u!1 &347527261 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7636277568142831314, guid: 451ff3d8d9dfdae4695c3d7aae0ded82, type: 3}
+  m_PrefabInstance: {fileID: 347527260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &360702874
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +624,7 @@ GameObject:
   - component: {fileID: 431380271}
   - component: {fileID: 431380270}
   - component: {fileID: 431380273}
+  - component: {fileID: 431380274}
   m_Layer: 5
   m_Name: BuyTower
   m_TagString: Untagged
@@ -760,6 +766,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &431380274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431380268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d3ef9ba1054449c95f39b2c588f52b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1085559280}
+  priceScript: {fileID: 347527261}
 --- !u!1 &436654894
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,7 +833,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4991979761420889120, guid: 451ff3d8d9dfdae4695c3d7aae0ded82, type: 3}
   m_PrefabInstance: {fileID: 347527260}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 347527261}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc350122fd0aa480caaf1942f55f10e9, type: 3}
@@ -1590,7 +1610,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 221.49, y: 40.205}
+  m_SizeDelta: {x: 221.49, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1100378937
 MonoBehaviour:
@@ -1637,7 +1657,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 2142298976}
   target: {fileID: 1863233132}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 1, z: 0}
 --- !u!114 &1100378938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2247,7 +2267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 201582090}
-  priceScript: {fileID: 0}
+  priceScript: {fileID: 6657961935311599898}
 --- !u!1 &1250682967
 GameObject:
   m_ObjectHideFlags: 0
@@ -3968,6 +3988,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28a5df76eb2517a46957666f82e0fb8a, type: 3}
+--- !u!1 &6657961935311599898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7636277568142831314, guid: 28a5df76eb2517a46957666f82e0fb8a, type: 3}
+  m_PrefabInstance: {fileID: 6657961935311599897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

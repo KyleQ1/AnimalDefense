@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AnimalDefenseScene.unity
     guid: 7870770108dea42728461069cc81b9b2
+  - enabled: 1
+    path: Assets/Scenes/Title Screen.unity
+    guid: 501300086cd7248bb8e5380affca879d
   m_configObjects: {}
