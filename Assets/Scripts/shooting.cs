@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class shooting : MonoBehaviour
 {
+    public AudioSource shootSound;
+    public AudioClip shootSoundClip;
     private Camera mainCam;
     private Vector3 mousePos;
     public GameObject bullet;
@@ -17,6 +19,7 @@ public class shooting : MonoBehaviour
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+
     }
 
     // Update is called once per frame
@@ -44,6 +47,7 @@ public class shooting : MonoBehaviour
         if (Input.GetMouseButton(0) && canFire && inWave){
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            shootSound.PlayOneShot(shootSoundClip);
         }
 
     }
