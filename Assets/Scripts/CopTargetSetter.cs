@@ -24,7 +24,7 @@ public class CopTargetSetter : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            float damage = 50f;
+            int damage = 50;
             bool died = health.TakeDamage(damage);
             if (died)
             {

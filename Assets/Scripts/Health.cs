@@ -5,22 +5,22 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public float maxHealth = 100f;
-    private float currentHealth;
-    public Image healthBarFill;
+    public int maxHealth = 100;
+    public int currentHealth;
+    public HealthBar healthBar;
 
     void Start()
     {
         currentHealth = maxHealth;
-        UpdateHealthBar();
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // returns true if the object died
-    public bool TakeDamage(float amount)
+    public bool TakeDamage(int amount)
     {
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        UpdateHealthBar();
+        healthBar.SetHealth(currentHealth);
         if (currentHealth <= 0)
         {
             Die();
@@ -29,19 +29,11 @@ public class Health : MonoBehaviour
         return false;
     }
 
-    public void Heal(float amount)
+    public void Heal(int amount)
     {
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        UpdateHealthBar();
-    }
-
-    public void UpdateHealthBar()
-    {
-        if (healthBarFill != null)
-        {
-            healthBarFill.fillAmount = currentHealth / maxHealth;
-        }
+        healthBar.SetHealth(currentHealth);
     }
 
     private void Die()
