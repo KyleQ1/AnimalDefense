@@ -135,10 +135,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.79
+  radius: 0.89
   height: 2
   canMove: 1
-  maxSpeed: 3
+  maxSpeed: 3.3
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -287,7 +287,6 @@ MonoBehaviour:
   target: {fileID: 0}
   bulletSpeed: 10
   shootingInterval: 4
-  spawnDistance: 3
   lifetime: 4
 --- !u!1 &1068978751278434964
 GameObject:

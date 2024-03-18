@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Pathfinding;
 using UnityEngine;
 
 public class WallSpawner : MonoBehaviour
@@ -29,6 +30,13 @@ public class WallSpawner : MonoBehaviour
         {
             Vector3 spawnPosition = GetWorldPosition();
             currentWall = Instantiate(newWall, spawnPosition, Quaternion.identity);
+            currentWall.layer = LayerMask.NameToLayer("Obstacle");
+            Bounds bounds = currentWall.GetComponent<BoxCollider2D>().bounds;
+
+            GraphUpdateObject guo = new GraphUpdateObject(bounds);
+
+            AstarPath.active.UpdateGraphs(guo);
+            AstarPath.active.Scan();
             isDragging = true;
             m.buy(price);
         }
