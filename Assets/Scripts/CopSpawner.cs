@@ -7,7 +7,7 @@ public class WaveSpawner : MonoBehaviour
     public GameObject copPrefab;
     public float spawnDistance = 20f;
     public float timeBetweenWaves = 5f;
-    public float countdown = 2f;
+    public float countdown = 0f;
     private int waveNumber = 1;
     public bool readyForWave;
 
