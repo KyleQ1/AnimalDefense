@@ -123,71 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &77909690
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 367297793130410309, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1193504149647084703, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
-      propertyPath: m_Name
-      value: guncop
-      objectReference: {fileID: 0}
-    - target: {fileID: 5197813477472743801, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
-      propertyPath: money
-      value: 
-      objectReference: {fileID: 1131447675}
-    - target: {fileID: 7185212870812987357, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7185212870812987357, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7185212870812987357, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7185212870812987357, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7185212870812987357, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7185212870812987357, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7185212870812987357, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7185212870812987357, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7185212870812987357, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7185212870812987357, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 376dca0e6a46d2c42bc3007ae03182a5, type: 3}
 --- !u!1 &109168318
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,6 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newWall: {fileID: 398501246}
+  currentWall: {fileID: 0}
+  isDragging: 0
   price: 5
   money: {fileID: 1131447675}
 --- !u!4 &109168320
@@ -2871,7 +2808,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.77, y: 0.92, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.47, y: 0.47, z: 0.47}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 796124840}
@@ -2960,9 +2897,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1863233129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8de5d5feb8554254a144407cdb7703b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a46f964eb2e4c54cb0e1cb2cddfaa19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  healthBarFill: {fileID: 0}
 --- !u!1 &1887505732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,7 +2937,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 107.81253, y: -10.0937195}
+  m_AnchoredPosition: {x: 107.8125, y: -10.09375}
   m_SizeDelta: {x: 200, y: 13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1887505734
@@ -3740,4 +3679,3 @@ SceneRoots:
   - {fileID: 360702876}
   - {fileID: 923544291}
   - {fileID: 1684753661}
-  - {fileID: 77909690}

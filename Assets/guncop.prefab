@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: 6838077524960970683}
   - component: {fileID: 5197813477472743801}
   - component: {fileID: 4613751706133067750}
-  m_Layer: 0
+  - component: {fileID: 2704516403166009061}
+  m_Layer: 7
   m_Name: guncop
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,6 +250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48db96b715c4fac479d24e3de6d8d6af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  money: {fileID: 0}
+  monetaryValue: 5
 --- !u!114 &4613751706133067750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,3 +266,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthBarFill: {fileID: 0}
+--- !u!114 &2704516403166009061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193504149647084703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d438378f726a1344386164b9ae7cd4c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2938545742969808935, guid: 9a89b1ba04b68c141a1371faf1f5922e, type: 3}
+  target: {fileID: 0}
+  bulletSpeed: 10
+  shootingInterval: 2
+  spawnDistance: 1
